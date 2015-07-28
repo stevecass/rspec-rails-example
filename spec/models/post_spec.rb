@@ -4,7 +4,7 @@ describe Post do
   it "title should be automatically titleized before save" do
     post = Post.new
     post.title   = "New post!"
-    post.content = "A great story"
+    post.content = "A really great story"
     expect {
       post.save
     }.to change { post.title }.from("New post!" ).to("New Post!")
@@ -13,7 +13,7 @@ describe Post do
   it "post should be unpublished by default" do
     post = Post.new
     post.title   = "New post!"
-    post.content = "A great story"
+    post.content = "Super great story"
     post.save
     expect(post.is_published).to eq(false)
   end
