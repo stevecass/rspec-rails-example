@@ -1,0 +1,6 @@
+<%= form_for [:admin, @post] do |f| %>
+  <%= f.text_field :title, :placeholder => 'Title' %>
+  <%= f.text_area :content, :placeholder => 'Content' %>
+  Publish? <%= f.check_box :is_published %>
+  <%= f.submit "Save" %>
+<% end %>

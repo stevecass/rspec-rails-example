@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: sfrsra_development
+
+test:
+  <<: *default
+  database: travis_ci_test
+
+production:
+  <<: *default
+  database: sfrsra_production
+  username: sfrsra
+  password: <%= ENV['SFRSRA_DATABASE_PASSWORD'] %>

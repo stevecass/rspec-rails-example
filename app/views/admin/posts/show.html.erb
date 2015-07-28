@@ -1,0 +1,5 @@
+<%= link_to "Admin welcome page", admin_posts_path %>
+<%= link_to "Edit post", edit_admin_post_path(@post) %>
+<h1><%= link_to @post.title, post_path(@post), id:"post#{@post.id}" %> </h1>
+Published: <%= @post.is_published? %>
+<%= simple_format @post.content %>
