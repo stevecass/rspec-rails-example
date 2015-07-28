@@ -13,7 +13,7 @@ describe Post do
   it "post should be unpublished by default" do
     post = Post.new
     post.title   = "New post!"
-    post.content = "A great story"
+    post.content = "Super great story"
     post.save
     expect(post.is_published).to eq(false)
   end
